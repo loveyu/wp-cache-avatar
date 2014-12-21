@@ -8,7 +8,8 @@
 /**
  * 头像HASH值
  */
-define("AVATAR_HASH", isset($_GET['hash']) ? md5($_GET['hash']) : md5(rand(0, 100000)));
+define("AVATAR_HASH", (isset($_GET['hash']) && !empty($_GET['hash'])) ? md5($_GET['hash']) : md5(rand(0, 1000000)));
+
 /**
  * 头像大小
  */
