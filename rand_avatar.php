@@ -160,6 +160,15 @@ function getcenter($shape, $fR, $fG, $fB, $bR, $bG, $bB, $usebg){
  * @param $b
  */
 function fix_rgb(&$r, &$g, &$b){
+	if($r==0){
+		$r = 10;
+	}
+	if($g==0){
+		$g = 10;
+	}
+	if($b ==0){
+		$b = 10;
+	}
 	while($r < 210){
 		$r *= 1.3;
 	}
